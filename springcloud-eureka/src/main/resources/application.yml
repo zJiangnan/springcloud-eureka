@@ -1,0 +1,13 @@
+server:
+  port: 7001
+
+# Eureka配置
+eureka:
+  instance:
+    hostname: echo7001.cn  # Eureka服务端名称：IP
+  client:
+    register-with-eureka: false # 表示是否向 Eureka 注册中心注册自己
+    fetch-registry: false # 如果为 false 则表示自己为服务注册中心
+    service-url:
+      # defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/ # 单机：服务的url：监控页面
+      defaultZone: http://echo7002.cn:7002/eureka/, http://echo7003.cn:7003/eureka/ # 集群式
