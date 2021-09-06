@@ -1,5 +1,5 @@
 server:
-  port: 8001
+  port: 8003
 
 #myBatis配置
 mybatis:
@@ -13,7 +13,7 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource #数据源
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/db_01?useUnicode=true&characterEncoding=utf-8
+    url: jdbc:mysql://localhost:3306/db_03?useUnicode=true&characterEncoding=utf-8
     username: root
     password: jiangnan0711
 
@@ -23,7 +23,7 @@ eureka:
     service-url:
       defaultZone: http://echo7001.cn:7001/eureka/, http://echo7002.cn:7002/eureka/, http://echo7003.cn:7003/eureka/
   instance:
-    instance-id: springcloud-provider-dept-8001 # 修改Eureka的默认描述信息
+    instance-id: springcloud-provider-dept-8003 # 修改Eureka的默认描述信息
 # info配置
 info:
   app.name: echo-springcloud
