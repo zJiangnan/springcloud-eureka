@@ -1,0 +1,31 @@
+server:
+  port: 8001
+
+#myBatis配置
+mybatis:
+  type-aliases-package: cn.echo.springcloud.pojo
+  config-location: classpath:mybatis-config.xml
+  mapper-locations: classpath:mapper/*.xml
+#Spring配置
+spring:
+  application:
+    name: springcloud-provider-dept
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource #数据源
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/db_01?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: jiangnan0711
+
+# Eureka配置，将服务注册到服务端
+eureka:
+  client:
+    service-url:
+      defaultZone: http://echo7001.cn:7001/eureka/, http://echo7002.cn:7002/eureka/, http://echo7003.cn:7003/eureka/
+  instance:
+    instance-id: springcloud-provider-dept-hystrix-8001 # 修改Eureka的默认描述信息
+    prefer-ip-address: true # 显示服务IP地址而不是  localhost
+# info配置
+info:
+  app.name: echo-springcloud
+  company.name: blog.echo.cn
