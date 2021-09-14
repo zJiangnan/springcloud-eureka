@@ -19,7 +19,8 @@ import java.util.List;
  **/
 @Service
 //调用指定服务，参数：value调用的服务名称；url：调用的前缀；contextId：进行多个Feign调用时取别名
-@FeignClient(value = "SPRINGCLOUD-PROVIDER-DEPT")
+//fallbackFactory：设置降级
+@FeignClient(value = "SPRINGCLOUD-PROVIDER-DEPT", fallbackFactory = DeptClientServiceFallbackFactory.class)
 public interface DeptClientService {
 
     @GetMapping("/dept/queryById/{id}")
