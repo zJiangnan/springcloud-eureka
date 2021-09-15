@@ -15,6 +15,7 @@
         <module name="spirngcloud-consumer-dept" />
         <module name="springcloud-eureka-7003" />
         <module name="springcloud-eureka-7002" />
+        <module name="springcloud-consumer-hystrix-dashboard" />
         <module name="spirngcloud-consumer-dept-feign" />
         <module name="springcloud-provider-dept-hystrix" />
       </profile>
