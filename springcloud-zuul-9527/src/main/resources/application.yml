@@ -1,0 +1,30 @@
+server:
+  port: 9527
+
+spring:
+  application:
+    name: springcloud-zuul-geteway # 微服务名称
+
+---
+
+# Eureka 配置
+# 服务注册
+eureka:
+  client:
+    service-url:
+      defaultZone: http://echo7001.cn:7001/eureka/, http://echo7002.cn:7002/eureka/, http://echo7003.cn:7003/eureka/
+  instance:
+    instance-id: zuul-9527.com # 实例化ID
+    prefer-ip-address: true # 显示IP
+info: # 服务信息
+  app.name: echo
+  company.name: echo
+
+---
+# Zuul配置
+zuul:
+  routes:
+    mydept.serviceId: springcloud-provider-dept # 访问的原名（微服务名称）
+    mydept.path: /mydept/** # 设置访问的名称
+  ignored-services: "*" # 不允许使用这些字符串访问，"*" 表示全部隐藏
+  # prefix: /echo # 设置公共的访问前缀
