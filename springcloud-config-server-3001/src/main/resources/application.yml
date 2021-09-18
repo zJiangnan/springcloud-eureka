@@ -1,0 +1,11 @@
+server:
+  port: 3001
+spring:
+  application:
+    name: springcloud-config-server
+  # 连接远程仓库
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/zJiangnan/springcloud-config.git # 使用HTTPS不能使用SSH
