@@ -1,0 +1,4 @@
+# application.yml用户界别配置
+spring:
+  application:
+    name: springcloud-config-client-3002
