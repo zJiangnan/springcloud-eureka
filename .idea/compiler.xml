@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="springcloudapi" />
         <module name="springcloud-provider-dept-8002" />
+        <module name="springcloud-config-dept-8001" />
         <module name="springcloud-provider-dept" />
         <module name="springcloud-provider-dept-8003" />
         <module name="springcloud-zuul-9527" />
@@ -16,6 +17,7 @@
         <module name="springcloud-eureka-7003" />
         <module name="springcloud-eureka-7002" />
         <module name="spirngcloud-consumer-dept-feign" />
+        <module name="springcloud-config-eureka-7001" />
         <module name="springcloud-eureka" />
         <module name="spirngcloud-consumer-dept" />
         <module name="springcloud-consumer-hystrix-dashboard" />
